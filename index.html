@@ -43,8 +43,11 @@
   .hero{margin:40px 0 0}
   .body p{margin:0 0 1.35em}
   .body{margin:52px 0 0}
-  .gallery{margin:56px 0 0; display:grid; grid-template-columns:1fr 1fr; gap:14px}
-  .gallery figure:first-child{grid-column:1 / -1}
+  .works{display:grid; grid-template-columns:1fr 1fr; gap:34px 22px}
+  .work img{width:100%; height:auto; display:block; border-radius:2px; background:#fff}
+  .work figcaption{margin-top:12px; text-align:center}
+  .w-name{display:block; font-size:16px; letter-spacing:.01em}
+  .w-spec{display:block; margin-top:4px; font-size:12.5px; line-height:1.6; color:var(--soft); letter-spacing:.01em}
   h2{
     font-size:13px; letter-spacing:.28em; text-transform:uppercase; font-weight:600;
     color:var(--soft); margin:72px 0 20px; text-align:center;
@@ -60,7 +63,7 @@
   @media (max-width:560px){
     body{font-size:16px}
     header{padding-top:52px}
-    .gallery{grid-template-columns:1fr}
+    .works{grid-template-columns:1fr; gap:40px}
     .fair{letter-spacing:.06em}
   }
 </style>
@@ -92,11 +95,85 @@
     <p>Useful and useless, stumbling stone and stepping stone, a single day and forever — the pleasure is in crossing between them. Somewhere on the border of the everyday and art, I keep walking, a step at a time.</p>
   </div>
 
-  <div class="gallery">
-    <figure><img src="img/group.jpg" alt="Carved wooden leaves and small spoons laid out together"></figure>
-    <figure><img src="img/servers.jpg" alt="A pair of leaf serving pieces with chopsticks"></figure>
-    <figure><img src="img/inhand.jpg" alt="A leaf spoon held in the hand, showing its scale"></figure>
-    <figure><img src="img/table.jpg" alt="A small wooden box and spoon on a table with berries"></figure>
+  <h2>The Work</h2>
+  <div class="works">
+      <figure class="work">
+        <img src="img/item-01.jpg" alt="Leaf" loading="lazy">
+        <figcaption>
+          <span class="w-name">Leaf</span>
+          <span class="w-spec">Korean birch, zelkova, cherry and others · oil or urushi lacquer</span>
+        </figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/item-02.jpg" alt="Everyday Cutlery" loading="lazy">
+        <figcaption>
+          <span class="w-name">Everyday Cutlery</span>
+          <span class="w-spec">Korean birch · walnut oil</span>
+        </figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/item-03.jpg" alt="Everyday Cutlery, lacquered" loading="lazy">
+        <figcaption>
+          <span class="w-name">Everyday Cutlery, lacquered</span>
+          <span class="w-spec">Korean birch · urushi where it meets the lips, oil on the handle</span>
+        </figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/item-04.jpg" alt="Moon Spoon" loading="lazy">
+        <figcaption>
+          <span class="w-name">Moon Spoon</span>
+          <span class="w-spec">Korean birch · walnut oil</span>
+        </figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/item-05.jpg" alt="Leaf Tea Scoop" loading="lazy">
+        <figcaption>
+          <span class="w-name">Leaf Tea Scoop</span>
+          <span class="w-spec">Korean birch · oil</span>
+        </figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/item-06.jpg" alt="Leaf Salad Server" loading="lazy">
+        <figcaption>
+          <span class="w-name">Leaf Salad Server</span>
+          <span class="w-spec">Korean birch · oil</span>
+        </figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/item-07.jpg" alt="Cloud Bowl" loading="lazy">
+        <figcaption>
+          <span class="w-name">Cloud Bowl</span>
+          <span class="w-spec">Zelkova, cherry, toon and others · oil or urushi lacquer</span>
+        </figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/item-09.jpg" alt="A Wooden Plane" loading="lazy">
+        <figcaption>
+          <span class="w-name">A Wooden Plane</span>
+          <span class="w-spec">Korean birch, cherry and others · oil</span>
+        </figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/item-10.jpg" alt="The Time of Bark" loading="lazy">
+        <figcaption>
+          <span class="w-name">The Time of Bark</span>
+          <span class="w-spec">Cherry bark, zelkova bark and others · urushi lacquer or oil</span>
+        </figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/item-11.jpg" alt="Times, Not One" loading="lazy">
+        <figcaption>
+          <span class="w-name">Times, Not One</span>
+          <span class="w-spec">Cherry, black locust, chestnut and others · urushi lacquer</span>
+        </figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/item-12.jpg" alt="Gyeol" loading="lazy">
+        <figcaption>
+          <span class="w-name">Gyeol</span>
+          <span class="w-spec">Figured persimmon and others · oil or unfinished</span>
+        </figcaption>
+      </figure>
   </div>
 
   <h2>Contact</h2>

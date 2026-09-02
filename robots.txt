@@ -1,0 +1,7 @@
+# www.ilsangdogoo.com — 일상의 도구점 / Choi Sungwoo
+# 원본은 볼트 시안 폴더다. 배포본을 직접 고치지 않는다.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.ilsangdogoo.com/sitemap.xml

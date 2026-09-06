@@ -155,7 +155,9 @@ footer a{text-decoration:none;border-bottom:1px solid var(--line)}
   .grid{grid-template-columns:repeat(2,1fr)}
   .texts,.doors{grid-template-columns:1fr}
   nav{flex-direction:column;gap:14px}
-  nav ul{gap:18px}
+  /* 320px(작은 폰)에서 「MAKING WRITING INFO | EN FR」 한 줄이 16px 넘쳤다.
+     언어를 EN·FR 한 짝으로 늘린 2026-09-06에 생긴 일 — 줄을 접게 둔다. */
+  nav ul{gap:18px;flex-wrap:wrap;row-gap:11px}
 }
 
 p.slot{color:var(--faint);font-style:italic;margin-top:-.9em}

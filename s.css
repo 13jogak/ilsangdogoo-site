@@ -60,6 +60,20 @@ nav a.m{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(
 nav a.m:hover{color:var(--ink);border-bottom-color:var(--line)}
 nav a.m.on{color:var(--ink);border-bottom-color:var(--ink)}
 
+/* ── 언어 스위치 (2026-08-24) ──────────────────────────────────
+   인쇄물 3종의 QR은 홈페이지 하나로만 간다. 그래서 언어를 고르는 자리는
+   QR을 찍고 들어온 사람이 맞는 첫 갈림길이다 — nav 끝에 세로줄로 떼어 둔다.
+   메뉴(Making·Writing·Info)와 같은 층으로 보이면 섹션으로 오해된다. */
+nav li.lang{padding-left:22px;border-left:1px solid var(--line)}
+nav a.m.lg{color:var(--faint)}
+nav a.m.lg:hover{color:var(--ink);border-bottom-color:var(--line)}
+
+/* 프랑스어 브라우저로 들어온 사람에게만 뜨는 한 줄.
+   ⚠️ 자동으로 넘기지 않는다 — 넘겨 버리면 영문을 보러 온 사람이 갇힌다. */
+.fr-hint{display:none;margin:14px 0 0;padding:11px 18px;background:var(--band);
+  border:1px solid var(--line);text-align:center;font-size:13px;letter-spacing:.02em}
+.fr-hint a{text-decoration:none;border-bottom:1px solid var(--soft)}
+
 /* ── type ── */
 .q{
   font-size:clamp(25px,4.4vw,37px);font-weight:400;line-height:1.34;
@@ -187,3 +201,14 @@ p.slot{color:var(--faint);font-style:italic;margin-top:-.9em}
   .triad a{border-left:0;border-top:1px solid var(--line)}
   .triad a:first-child{border-top:0}
 }
+
+/* ── 갈래 안에 조각이 쌓인다 (2026-08-23) ──
+   Writing이 「갈래 하나 = 글 한 편」에서 「갈래 하나 = 조각 여럿」으로 바뀌었다. */
+.piece{border-top:1px solid var(--line);padding:46px 0 10px}
+.piece:first-of-type{border-top:0;padding-top:6px}
+.piece .pt{font-size:22px;line-height:1.36;margin:0 0 7px;letter-spacing:-.005em}
+.piece .pd{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--faint);margin:0 0 24px}
+.piece p{font-size:16.5px;line-height:1.85;margin:0 0 1.25em}
+.piece .src{font-size:12.5px;color:var(--faint);margin-top:20px;font-style:italic}
+.txt .cnt{display:block;margin-top:8px;font-size:11px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--faint)}

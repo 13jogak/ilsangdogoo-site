@@ -71,7 +71,7 @@ nav a.m.on{color:var(--ink);border-bottom-color:var(--ink)}
    고를 수 있다는 걸 한자리에서 말한다. 안 고른 쪽은 --soft(5.48, AA). */
 nav li.lang{padding-left:22px;border-left:1px solid var(--line);
   display:flex;gap:14px;align-items:baseline}
-nav a.m.lg{color:var(--soft);font-size:11.5px}
+nav a.m.lg{color:var(--soft)}
 nav a.m.lg.on{color:var(--ink);border-bottom-color:var(--ink);cursor:default}
 nav a.m.lg:hover{color:var(--ink);border-bottom-color:var(--line)}
 
@@ -158,6 +158,19 @@ footer a{text-decoration:none;border-bottom:1px solid var(--line)}
   /* 320px(작은 폰)에서 「MAKING WRITING INFO | EN FR」 한 줄이 16px 넘쳤다.
      언어를 EN·FR 한 짝으로 늘린 2026-09-06에 생긴 일 — 줄을 접게 둔다. */
   nav ul{gap:18px;flex-wrap:wrap;row-gap:11px}
+
+  /* 손가락으로 누르는 화면에선 글자보다 「누를 자리」가 커야 한다.
+     WCAG 2.5.8(AA) 최소는 24×24px인데 나침반 21px · 꼬리말 16~19px였다.
+     ⚠️ 글자 크기도 밑줄 위치도 안 건드린다 — 보이지 않는 판만 넓힌다.
+     높이 28px: 줄 간격이 32px(21+11)이라 위아래 줄과 안 겹친다.
+     ⚠️ 좌우는 넓히지 않는다(left/right:0). 처음에 ±7px을 줬더니 꼬리말의
+     이메일과 인스타그램이 「·」 하나를 사이에 두고 판이 서로 물렸다 —
+     겹치면 엉뚱한 링크가 눌린다. 문제는 높이(16~21px)였지 폭이 아니었다. */
+  nav a.m, footer a, .txt .go, .fr-hint a, .narrow p a{position:relative}
+  nav a.m::after, footer a::after, .txt .go::after, .fr-hint a::after,
+  .narrow p a::after{
+    content:"";position:absolute;left:0;right:0;top:50%;
+    transform:translateY(-50%);height:28px}
 }
 
 p.slot{color:var(--faint);font-style:italic;margin-top:-.9em}
